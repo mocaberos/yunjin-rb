@@ -15,5 +15,5 @@ phases:
         # Execute test.
         #
         if trigger is merge master;
-          notify-ci-test-result YunJin-rb(3.1.0) ./codebuild/ci-test-3.1.0.sh;
+          notify-ci-test-result "YunJin-rb(3.1.0)" ./codebuild/ci-test-3.1.0.sh;
         fi;

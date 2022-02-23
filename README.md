@@ -11,6 +11,16 @@ https://github.com/mocaberos/yunjin
 ```
 gem 'yunjin-rb'
 ```
+#### ヘルスチェック
+```ruby
+YunJin::V1APIs::Sys.health?
+# or
+YunJin::V1APIs::Sys.health!
+```
+#### ツイート検索
+```ruby
+YunJin::V1APIs::Twitter.search_tweets!('めんだこちゃん', '2022-01-01', '2022-02-01', limit: 10)
+```
 
 ### 動作確認(irb)
 ```shell
