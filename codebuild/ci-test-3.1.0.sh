@@ -6,4 +6,4 @@
 set -eu;
 
 docker build -t mocaberos:mzk -f Dockerfile.3.1.0 .;
-docker run /app/bin/test.sh
+docker run mocaberos:mzk /app/bin/test.sh
