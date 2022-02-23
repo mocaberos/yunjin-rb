@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  yunjin_rb:
+    container_name: yunjin_rb
+    build:
+      context: .
+      dockerfile: Dockerfile.3.0.3
+    volumes:
+      - '.:/app'

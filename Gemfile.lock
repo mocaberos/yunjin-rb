@@ -8,6 +8,11 @@ GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.2)
+    bundle-audit (0.1.0)
+      bundler-audit
+    bundler-audit (0.9.0.1)
+      bundler (>= 1.2.0, < 3)
+      thor (~> 1.0)
     codecov (0.6.0)
       simplecov (>= 0.15, < 0.22)
     diff-lcs (1.5.0)
@@ -61,6 +66,7 @@ GEM
       simplecov_json_formatter (~> 0.1)
     simplecov-html (0.12.3)
     simplecov_json_formatter (0.1.4)
+    thor (1.2.1)
     typhoeus (1.4.0)
       ethon (>= 0.9.0)
     unicode-display_width (2.1.0)
@@ -69,6 +75,7 @@ PLATFORMS
   arm64-darwin-21
 
 DEPENDENCIES
+  bundle-audit
   codecov
   json_expressions
   rake

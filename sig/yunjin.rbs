@@ -1,4 +1,31 @@
-module Yunjin
+module YunJin
   VERSION: String
-  # See the writing guide of rbs: https://github.com/ruby/rbs#guides
+  BASE_URL: String?
+  HEADERS: {client: String, version: String}
+
+  class RequestError < StandardError
+  end
+
+  self.@logger: Logger
+
+  def self.logger: -> Logger
+
+  private
+  def self._logger: -> Logger
+
+  module V1APIs
+    class Sys
+      def self.health?: -> bool
+    end
+
+    class Twitter
+      def self.search_tweets!: (String query, ?start_date: String, ?end_date: String, ?limit: Integer) -> Array[Hash]
+      def self.get_user_profile_by_id!: (String user_id) -> Hash
+      def self.get_user_profile_by_name!: (String user_name) -> Hash
+      def self.name_to_id!: (String user_name) -> String
+      def self.id_to_name!: (String user_id) -> String
+      def self.user_timeline!: (String user_id, String start_date, String end_date) -> Array[Hash]
+      def self.all_tweets!: (String user_id) -> nil
+    end
+  end
 end

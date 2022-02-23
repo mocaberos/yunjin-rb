@@ -1,35 +1,27 @@
-# Yunjin
+# YunJinクライアントライブラリ
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/yunjin`. To experiment with that code, run `bin/console` for an interactive prompt.
+#### Ruby3.1.0 CI Test Status
+[![Build Status](https://codebuild.ap-northeast-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiQjduQWZnZElnYllQWlcrSmx1TEY4cjVuQnRkZUFGK2g0Skl1b24zRFJ4Q2FhZGlUV0x1cUEyZFkzME02a0JCMGQ2MjJxeGR5ZWpmYzd5b2l1UnBrSlFnPSIsIml2UGFyYW1ldGVyU3BlYyI6Im96bU1XalpqRFJydjdlcXYiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master)](https://ap-northeast-1.console.aws.amazon.com/codesuite/codebuild/085041388644/projects/yunjin-rb-3-1-0)
+#### Ruby3.0.3 CI Test Status
+[![Build Status](https://codebuild.ap-northeast-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoib3NndjFNSCsrVDFJUEtvdjdUWWFSMDZqRWwzejI1K2F6UHl0MkNiTFh4bVdFdkVwMUVUYnBxbFp5YlBwZlQvRGNERTdha2lPK1NqMU14MUIxNi9oaEs0PSIsIml2UGFyYW1ldGVyU3BlYyI6IjdyNHVta2d4eVhuMHBseDciLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master)](https://ap-northeast-1.console.aws.amazon.com/codesuite/codebuild/085041388644/projects/yunjin-rb-3-0-3)
 
-TODO: Delete this and the text above, and describe your gem
+https://github.com/mocaberos/yunjin
 
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'yunjin'
+### 使用方法
+```
+gem 'yunjin-rb'
 ```
 
-And then execute:
+### 動作確認(irb)
+```shell
+$ ./bin/console
+# or
+$ docker-compose run yunjin_rb
+```
 
-    $ bundle install
-
-Or install it yourself as:
-
-    $ gem install yunjin
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/yunjin.
+### テストを実行する
+```shell
+$ ./bin/test.sh
+# or
+$ docker-compose run yunjin_rb /app/bin/test.sh
+```
