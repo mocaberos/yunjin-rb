@@ -21,6 +21,32 @@ YunJin::V1APIs::Sys.health!
 ```ruby
 YunJin::V1APIs::Twitter.search_tweets!('めんだこちゃん', '2022-01-01', '2022-02-01', limit: 10)
 ```
+#### ユーザーIDによる、ユーザープロフィール情報取得
+```ruby
+YunJin::V1APIs::Twitter.get_user_profile_by_id!('1040201001767034882')
+```
+#### ユーザー名による、ユーザープロフィール情報取得
+```ruby
+YunJin::V1APIs::Twitter.get_user_profile_by_name!('Mendako_Vtuber')
+```
+#### ユーザー名をユーザーIDに変換する
+```ruby
+YunJin::V1APIs::Twitter.name_to_id!('Mendako_Vtuber')
+```
+#### ユーザーIDをユーザー名に変換する
+```ruby
+YunJin::V1APIs::Twitter.id_to_name!('1040201001767034882')
+```
+#### 指定したユーザーのツイートを取得
+```ruby
+YunJin::V1APIs::Twitter.user_timeline!('1040201001767034882', '2022-01-01', '2022-02-01')
+```
+#### 指定したユーザーのツイートを全て取得する
+```ruby
+YunJin::V1APIs::Twitter.all_tweets!('1040201001767034882') do |tweets|
+  p tweets
+end
+```
 
 ### 動作確認(irb)
 ```shell
