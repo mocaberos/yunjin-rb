@@ -2,6 +2,7 @@
 
 require 'yunjin'
 require 'simplecov'
+require 'codecov'
 require 'json_expressions/rspec'
 require 'typhoeus'
 

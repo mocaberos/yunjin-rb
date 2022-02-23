@@ -6,4 +6,4 @@
 set -eu;
 
 docker build -t mocaberos:mzk -f Dockerfile.3.0.3 .;
-docker run /app/bin/test.sh
+docker run -e CODECOV_TOKEN="${CODECOV_TOKEN}" /app/bin/test.sh
