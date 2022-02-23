@@ -1,0 +1,19 @@
+version: 0.2
+
+env:
+  shell: bash
+
+phases:
+  install:
+    commands:
+      - export PATH=$PATH:$(pwd)/vendor/codebuild-scripts
+      - docker-login
+  pre_build:
+    commands:
+      - |
+        #
+        # Execute test.
+        #
+        if trigger is merge master;
+          notify-ci-test-result YunJin-rb(3.0.3) ./codebuild/ci-test-3.0.3.sh;
+        fi;

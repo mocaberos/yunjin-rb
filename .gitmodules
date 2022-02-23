@@ -1,0 +1,9 @@
+[submodule "vendor/rubocop"]
+	path = vendor/rubocop
+	url = https://github.com/mocaberos/rubocop.git
+[submodule "vendor/dev"]
+	path = vendor/dev
+	url = https://github.com/mocaberos/dev.git
+[submodule "vendor/codebuild-scripts"]
+	path = vendor/codebuild-scripts
+	url = https://github.com/mocaberos/codebuild-scripts.git
